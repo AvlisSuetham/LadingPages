@@ -1,0 +1,245 @@
+/* =========================
+   🌈 VARIÁVEIS DE TEMA
+========================= */
+:root {
+  --bg-body: #f8fafc;
+  --text-body: #0f1724;
+  --bg-hero-start: #eef2ff;
+  --bg-hero-end: #f0f9ff;
+  --text-muted: #6b7280;
+  --gradient-brand-start: #0ea5e9;
+  --gradient-brand-end: #7c3aed;
+}
+
+/* =========================
+   🧱 ESTILOS BASE
+========================= */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg-body);
+  color: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   🦸 SEÇÃO HERO
+========================= */
+.hero {
+  background: linear-gradient(90deg, var(--bg-hero-start), var(--bg-hero-end));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 36, 0.08);
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* =========================
+   💳 CARD DEMO
+========================= */
+.card-demo {
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 36, 0.06);
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(15, 23, 36, 0.1);
+}
+
+/* =========================
+   💠 LOGO E MARCA
+========================= */
+.logo-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--gradient-brand-start), var(--gradient-brand-end));
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 1.05rem;
+}
+
+/* =========================
+   🦶 RODAPÉ
+========================= */
+footer {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   📱 RESPONSIVIDADE
+========================= */
+
+/* Telas médias (tablets) */
+@media (min-width: 768px) {
+  .hero {
+    padding: 2.5rem;
+  }
+
+  .card-demo {
+    padding: 1.5rem;
+  }
+
+  .brand {
+    font-size: 1.15rem;
+  }
+}
+
+/* Telas grandes (desktop) */
+@media (min-width: 992px) {
+  .hero {
+    padding: 3rem;
+  }
+
+  footer {
+    padding: 3rem 0;
+  }
+}
+
+/* Forms de contato.php */
+/* --- Container centralizado da página de contato --- */
+.contact-page {
+  display: flex;
+  align-items: center;       /* centraliza vertical */
+  justify-content: center;   /* centraliza horizontal */
+  min-height: calc(100vh - 140px); /* tenta considerar header+footer; ajuste se necessário */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Card branco com sombra onde fica o form */
+.contact-card {
+  width: 100%;
+  max-width: 760px;         /* largura máxima do card */
+  background: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 24px rgba(15,23,36,0.08);
+  box-sizing: border-box;
+  text-align: center;       /* título e descrição centralizados */
+}
+
+/* Título e subtítulo */
+.contact-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  color: var(--text-body, #0f1724);
+}
+
+.contact-sub {
+  margin: 0 0 1.25rem 0;
+  color: var(--text-muted, #6b7280);
+}
+
+/* Form */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dois campos por linha em telas maiores */
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Faz o textarea ocupar 100% da largura (linha inteira) */
+.contact-form textarea,
+.contact-form input {
+  grid-column: auto;
+  width: 100%;
+}
+
+/* Força que o textarea ocupe as duas colunas */
+.contact-form textarea {
+  grid-column: 1 / -1;
+  min-height: 160px;
+}
+
+/* Labels em cima dos campos (visuais) */
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+  text-align: left;
+  color: var(--text-body, #0f1724);
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid var(--divider, #e2e8f0);
+  border-radius: .5rem;
+  padding: .75rem;
+  font-size: 1rem;
+  background: var(--card-bg, #fff);
+  color: var(--text-body, #0f1724);
+  box-sizing: border-box;
+}
+
+/* Área de ações (botão) — ocupa a linha inteira */
+.actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* Botão */
+.actions button {
+  background: linear-gradient(90deg, var(--gradient-brand-start, #0ea5e9), var(--gradient-brand-end, #7c3aed));
+  color: #fff;
+  border: none;
+  padding: .85rem 1.25rem;
+  border-radius: .6rem;
+  cursor: pointer;
+  font-weight: 700;
+  min-width: 180px;
+}
+
+/* Mensagens de alerta ficaram dentro do card */
+.alert {
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+}
+
+/* Responsivo: em telas pequenas, campos ocupam 1 coluna (stack) */
+@media (max-width: 767px) {
+  .contact-page {
+    min-height: auto;
+    padding: 1.25rem;
+  }
+  .contact-card {
+    padding: 1.25rem;
+  }
+  .contact-form {
+    grid-template-columns: 1fr; /* um por linha */
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mantém footer no fim e header visível (se header for sticky) */
+footer {
+  margin-top: 2rem;
+}
