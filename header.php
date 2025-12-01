@@ -31,7 +31,8 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.php">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="produto.php">Produtos</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-primary" href="contato.php">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.php">Contato</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary" href="admin.php">Team Sophira</a></li>
                 </ul>
             </div>
         </div>
