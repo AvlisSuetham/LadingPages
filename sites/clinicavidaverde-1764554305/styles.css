@@ -180,3 +180,54 @@ input:focus,select:focus,textarea:focus{border-color:var(--green-600);box-shadow
   .nav__toggle:checked ~ .nav__list{display:flex}
   .cards{grid-template-columns:1fr}
 }
+
+/* ---- entrada suave ---- */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.7s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- header roll hide ---- */
+.topbar.hide {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* ---- menu mobile ---- */
+.nav__list.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- botão voltar ao topo ---- */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: #2fa36f;
+  color: white;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hero__text h1 {
+  white-space: pre;
+}
